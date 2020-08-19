@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input onclick="startPlay()" type="button" value="Play">
+<script>
+    function startPlay() {
+        let startNum = +prompt("Nhập vào số bắt đầu");
+        let endNum = +prompt("Nhập vào số kết thúc");
+        let num = null;
+        num = Math.floor(Math.random() * (endNum- startNum + 1) + startNum);
+        let selectNum = +prompt("Bạn hãy đoán 1 số trong khoảng từ " + startNum +"-"+endNum)
+
+        for ( count = 0; count <= 3 ; count++) {
+            if(count == 3){
+                alert("Bạn đã nhập quá số lần cho phép");
+                break;
+            }   else {
+                if (selectNum== num ){
+                    alert("Chúc mừng!")
+                    break;
+                } else {
+                    if(selectNum < num) {
+                        alert("Số bạn nhập nhỏ hơn")
+                    } else {
+                        alert("Số bạn nhập lớn hơn")
+                    }
+                    selectNum= +prompt("Bạn hãy đoán 1 số trong khoảng từ " + startNum +"-"+endNum)
+                }
+            }
+        }
+        alert("Dap an: " + num);
+    }
+</script>
+</body>
+</html>
