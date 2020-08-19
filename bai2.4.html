@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <script>
+        let length = +prompt("Nhap chieu dai :");
+        let deceive = +prompt("Nhap chieu rong:");
+        for (i =1;i <= deceive; i++) {
+            for (j =1;j <= length;j++) {
+                if (i ==1 || j ==1 || i == deceive || j == length ) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp;&nbsp;")
+                }
+
+            }
+            document.write("<br>");
+        }
+    </script>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = +prompt("Nhap so tien ban dau:");
+    let numberOfLoanYear = +prompt("Nhap so nam cho vay :");
+    let YearInterestRates = +prompt("Nhap lai suat hang thang: (%)");
+    let Fv = money * (1 + YearInterestRates) * Math.abs(numberOfLoanYear);
+    document.write(Fv);
+
+</script>
+</body>
+</html>
